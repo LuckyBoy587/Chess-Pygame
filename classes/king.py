@@ -4,6 +4,7 @@ from classes.piece import BasePiece
 class King(BasePiece):
     def __init__(self, color):
         super().__init__(color)
+        self.has_moved = False
 
 
 class BlackKing(King):

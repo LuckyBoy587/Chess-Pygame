@@ -1,5 +1,7 @@
 import pygame
 
+from classes.utils import Position
+
 pygame.init()
 
 width, height = 640, 640
@@ -25,7 +27,7 @@ def main():
                 x, y = event.pos
                 row = y // (height // 8)
                 col = x // (width // 8)
-                game.handle_mouse_click(row, col)
+                game.handle_mouse_click(Position(row, col))
 
         pygame.display.flip()
 
